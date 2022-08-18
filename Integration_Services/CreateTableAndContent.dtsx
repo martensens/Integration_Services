@@ -1,0 +1,94 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/17/2022 2:38:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HCNB-4675"
+  DTS:CreatorName="AzureAD\MartinStiller"
+  DTS:DTSID="{995AF751-ABBA-49EF-899B-118765CE855E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="CreateTableAndContent"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{D5D06914-7899-4555-B034-B87C883B127C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CreateInsertDatabase.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{F2B29799-B1DF-4D32-82D6-FF8D9EB6BA14}"
+      DTS:ObjectName="CreateInsertDatabase.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\MartinStiller\Desktop\SSIS\Integration_Services\Integration_Services\Objekte\CreateInsertDatabase.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HCNB-4675\FALKENSEE.AdventureWorks20191]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0EB06FDD-2C0B-4C48-A014-641AC7F7F4D5}"
+      DTS:ObjectName="HCNB-4675\FALKENSEE.AdventureWorks20191">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=HCNB-4675\FALKENSEE;Initial Catalog=AdventureWorks2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HCNB-4675\FALKENSEE.AdventureWorks20191 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{97466A1D-0DC3-4328-98CD-5A1D1366C1D8}"
+      DTS:ObjectName="HCNB-4675\FALKENSEE.AdventureWorks20191 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=HCNB-4675\FALKENSEE;Initial Catalog=AdventureWorks2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Task &quot;SQL ausführen&quot;"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Task &quot;SQL ausführen&quot;"
+      DTS:DTSID="{87BFA685-3434-46A7-A9A8-8D4F5399BB72}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Task &quot;SQL ausführen&quot;"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{97466A1D-0DC3-4328-98CD-5A1D1366C1D8}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="CreateInsertDatabase.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Task &quot;SQL ausführen&quot;"
+          TopLeft="282.857147674171,97.8823543139395" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

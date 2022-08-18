@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1927
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Integration_Services", "Integration_Services\Integration_Services.dtproj", "{42EB86A3-CE1C-4E4F-AEEE-773B0ED44FA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Default = Azure|Default
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42EB86A3-CE1C-4E4F-AEEE-773B0ED44FA1}.Azure|Default.ActiveCfg = Azure
+		{42EB86A3-CE1C-4E4F-AEEE-773B0ED44FA1}.Azure|Default.Build.0 = Azure
+		{42EB86A3-CE1C-4E4F-AEEE-773B0ED44FA1}.Development|Default.ActiveCfg = Development
+		{42EB86A3-CE1C-4E4F-AEEE-773B0ED44FA1}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AB52074-2223-4A25-AFD8-0ECC25D50D44}
+	EndGlobalSection
+EndGlobal
